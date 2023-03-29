@@ -48,10 +48,10 @@ const Service = () => {
       <h1 className='px-7 py-7 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
 
       <div className='grid grid-cols-4 lg:grid-cols-4 justify-center items-center lg:mx-80 mx-2 py-4 lg:px-20 md:px-10 bg-teal-500 rounded-xl lg:my-5 mb-10 md:mx-40'>
-        <button className={category === 'ALL' ? ' bg-slate-500 mx-4 font-semibold text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-md'} onClick={()=> setCategory('ALL')}>All</button>
-        <button className={category === 'Pakaian' ? ' bg-slate-500 mx-2 font-semibold lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base' } onClick={()=> setCategory('Pakaian')} >Pakaian</button>
-        <button className={category === 'Karpet' ? ' bg-slate-500 mx-2 font-semibold px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('Karpet')} >Karpet</button>
-        <button className={category === 'Sepatu' ? ' bg-slate-500 mx-2 font-semibold px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('Sepatu')} >Sepatu</button>
+        <button className={category === 'ALL' ? ' bg-slate-500 mx-2 font-semibold py-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('ALL')}>All</button>
+        <button className={category === 'Pakaian' ? ' bg-slate-500 mx-2 font-semibold py-1 lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base' } onClick={()=> setCategory('Pakaian')} >Pakaian</button>
+        <button className={category === 'Karpet' ? ' bg-slate-500 mx-2 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('Karpet')} >Karpet</button>
+        <button className={category === 'Sepatu' ? ' bg-slate-500 mx-2 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('Sepatu')} >Sepatu</button>
       </div>
       <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5'>
         {
