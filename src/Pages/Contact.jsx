@@ -5,10 +5,10 @@ import ceoImg from '../assets/images/logo-black.png'
 const Contact = () => {
   return (
     <Helmet title='Contact'>
-      <h1 className='px-7 py-7 pl-10 text-3xl lg:my-5 mb-8 w-screen font-extrabold bg-slate-400'>Contact</h1>
-      <div className='mb-32 grid grid-cols-1 text-center'>
+      <h1 className='px-7 py-12 pl-10 text-3xl mb-20 lg:mb-5 w-screen font-extrabold bg-slate-400'>Contact</h1>
+      <div className='mb-32 grid mt-5 grid-cols-1 text-center'>
           <div className='lg:w-[800px] w-auto rounded-lg shadow-md lg:mx-auto mx-4 my-5 md:w-auto md:mx-10 h-[420px] bg-slate-400 ' >
-            <img src={ceoImg} alt='' className='my-10 bg-transparent w-[150px] mx-auto ' />
+            <img src={ceoImg} alt='' className='my-10 hover:scale-125 hover:animate-pulse cursor-pointer duration-500 bg-transparent w-[150px] mx-auto ' />
             <div className=' mx-4 bg-slate-400'>
               <h1 class="mt-4 my-4 text-xl bg-slate-400 font-bold">CEO</h1>
               <p class="text-xs my-4 bg-transparent text-gray-600">

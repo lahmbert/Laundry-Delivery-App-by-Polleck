@@ -4,11 +4,32 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/images/hero-img.png'
 import Contact from '../assets/images/logo-black.png'
 
-import Helmet from '../Component/Helmet/Helmet'
 
+import Helmet from '../Component/Helmet/Helmet'
 import './styles/home.css'
 
+const category = [
+  {
+    nama: 'Pakaian',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, illum?'
+  },
+  {
+    nama: 'Sepatu',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, illum?'
+  },
+  {
+    nama: 'Karpet',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, illum?'
+  },
+  {
+    nama: 'Lainnya',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, illum?'
+  },
+]
+
+
 const Home = () => {
+  
   return (
     <Helmet title='Home' >
 
@@ -22,7 +43,7 @@ const Home = () => {
           </p>
           <div className=' mt-4 flex bg-slate-500 justify-left lg:gap-10 gap-5 md:gap-10 mx-auto  lg:pr-44'>
             <Link to='/login' className='py-1 pt-1.5 px-5 font-bold text-md rounded-md hover:bg-[#212245] duration-300 bg-teal-500' >Masuk</Link>
-            <Link to='/service' className='py-1 px-5 font-bold text-md rounded-md bg-transparent border-slate-200 hover:border-teal-200 hover:text-teal-200 duration-300 border-2' >Service</Link>
+            <Link to='/service' className='py-1 px-5 font-bold text-md rounded-md bg-transparent border-slate-200 hover:border-teal-400 hover:text-teal-400 duration-300 border-2' >Service</Link>
           </div>
         </div>
         <div className=' px-0 bg-transparent items-center'>
@@ -36,63 +57,26 @@ const Home = () => {
 
         <h1 className=' text-center mb-2 bg-slate-400 font-semibold text-6xl'>Service</h1>
         <p className=' text-slate-600 mb-10 bg-slate-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus.</p>
-        <div className='px-4 bg-slate-400 mb-20 items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
-          <div class="p-4 m-7 lg:w-64 bg-slate-500 shadow-md rounded-xl">
-            <picture class=" bg-slate-500 rounded-lg block">
-              <img
-                src={logo} alt='' className=' bg-slate-500 hover:scale-125 rounded-lg my-3 mx-auto duration-300 h-40'
-              />
-            </picture>
+        <div className='px-4 container mx-auto bg-slate-400 mb-20 items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+          {
+            category.map((item) => (
+              <div class="p-4 m-3 gap-2 w-auto bg-slate-500 shadow-md  rounded-xl">
+                <picture class=" bg-transparent rounded-lg block">
+                  <img
+                    src={logo} alt='' className='mx-auto hover:scale-125 bg-transparent duration-300 rounded-lg py-3 h-28'
+                  />
+                </picture>
 
-            <h1 class="mt-4 mb-2 text-xl bg-slate-500 font-bold">Cuci Pakaian</h1>
-            <p class="text-xs bg-slate-500 text-gray-600">
-              Keterangan pendek tentang card di sini. Biasanya panjangnya dua sampai tiga baris, biar terlihat rapi.
-            </p>
-            <button className=' mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Get Start</button>
-          </div>
-
-          <div class="p-4  m-7 lg:w-64 bg-slate-500 shadow-md rounded-xl">
-            <picture class=" bg-slate-500 rounded-lg block">
-              <img
-                src={logo} alt='' className=' bg-slate-500 hover:scale-125 rounded-lg my-3 mx-auto duration-300 h-40'
-              />
-            </picture>
-
-            <h1 class="mt-4 mb-2 text-xl bg-slate-500 font-bold">Cuci Pakaian</h1>
-            <p class="text-xs bg-slate-500 text-gray-600">
-              Keterangan pendek tentang card di sini. Biasanya panjangnya dua sampai tiga baris, biar terlihat rapi.
-            </p>
-            <button className=' mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Get Start</button>
-          </div>
-
-          <div class="p-4 m-7 lg:w-64 bg-slate-500 shadow-md rounded-xl">
-            <picture class=" bg-slate-500 rounded-lg block">
-              <img
-                src={logo} alt='' className=' bg-slate-500 hover:scale-125 rounded-lg my-3 mx-auto duration-300 h-40'
-              />
-            </picture>
-
-            <h1 class="mt-4 mb-2 text-xl bg-slate-500 font-bold">Cuci Pakaian</h1>
-            <p class="text-xs bg-slate-500 text-gray-600">
-              Keterangan pendek tentang card di sini. Biasanya panjangnya dua sampai tiga baris, biar terlihat rapi.
-            </p>
-            <button className=' mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Get Start</button>
-          </div>
-
-          <div class="p-4 m-7 lg:w-64 bg-slate-500 shadow-md rounded-xl">
-            <picture class=" bg-slate-500 rounded-lg block">
-              <img
-                src={logo} alt='' className=' bg-slate-500 hover:scale-125 rounded-lg my-3 mx-auto duration-300 h-40'
-              />
-            </picture>
-
-            <h1 class="mt-4 mb-2 text-xl bg-slate-500 font-bold">Cuci Pakaian</h1>
-            <p class="text-xs bg-slate-500 text-gray-600">
-              Keterangan pendek tentang card di sini. Biasanya panjangnya dua sampai tiga baris, biar terlihat rapi.
-            </p>
-            <button className=' mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Get Start</button>
-          </div>
-
+                <h1 class="mt-4 mb-2 text-xl bg-transparent font-bold">Cuci {item.nama}</h1>
+                <p class="text-xs bg-transparent text-gray-600">
+                  {item.desc}
+                </p>
+                <Link to='/service'>
+                  <button className=' mt-3 px-8 bg-teal-500 hover:bg-[#212245] duration-300  rounded-md py-1'>Get Start</button>
+                </Link>
+              </div>
+            ))
+          }
         </div>
       </div>
 
@@ -113,7 +97,7 @@ const Home = () => {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo iste quidem illum corporis animi deserunt, excepturi numquam ipsam dolore nisi neque, porro illo omnis consectetur, iure facere sint odio.
               </p>
             </div>
-              <button className='mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Contact Me</button>
+            <button className='mt-3 bg-teal-500 hover:bg-[#212245] duration-300 px-4 rounded-md py-1'>Contact Me</button>
           </div>
         </div>
       </div>

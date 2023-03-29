@@ -45,7 +45,7 @@ const Service = () => {
   return (
     <Helmet title='Service' >
 
-      <h1 className='px-7 py-7 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
+      <h1 className='px-7 py-12 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
 
       <div className='grid grid-cols-4 lg:grid-cols-4 justify-center items-center lg:mx-80 mx-2 py-4 lg:px-20 md:px-10 bg-teal-500 rounded-xl lg:my-5 mb-10 md:mx-40'>
         <button className={category === 'ALL' ? ' bg-slate-500 mx-2 font-semibold py-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={()=> setCategory('ALL')}>All</button>
