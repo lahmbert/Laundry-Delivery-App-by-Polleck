@@ -105,7 +105,7 @@ const Home = () => {
         </div>
 
         <div className='container mb-32 grid grid-cols-1 text-center justify-center'>
-          <div className='lg:w-[800px] w-auto rounded-lg shadow-md mx-auto h-[400px] bg-slate-400 ' >
+          <div className='lg:w-[800px] w-auto rounded-lg shadow-md mx-3 lg:mx-auto h-[420px] bg-slate-400 ' >
             <img src={Contact} alt='' className='my-10 bg-transparent w-[150px] mx-auto ' />
             <div className=' mx-4 bg-slate-400'>
               <h1 class="mt-4 my-4 text-xl bg-slate-400 font-bold">CEO</h1>
