@@ -20,8 +20,8 @@ const Home = () => {
           <p className=' mb-7 text-sm text-slate-300 bg-slate-500'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquam perferendis voluptatibus ducimus modi voluptatum delectus commodi.
           </p>
-          <div className=' mt-4 flex pl-0 bg-slate-500 justify-left lg:gap-10 gap-4  lg:pr-44'>
-            <Link to='/login' className=' py-2 pl-14 mx-auto md:px-11 lg:px-11  font-bold w-full  hover:bg-[#212245] duration-300 bg-teal-500 sm:w-32 h-10 rounded-lg'>Mulai</Link>
+          <div className=' mt-4 flex bg-slate-500 justify-left lg:gap-10 gap-4 mx-auto  lg:pr-44'>
+            <Link to='/login' className='py-2 pl-14 mx-auto md:px-11 lg:px-11  font-bold w-full  hover:bg-[#212245] duration-300 bg-teal-500 sm:w-32 h-10 rounded-lg'>Mulai</Link>
             <Link to='/service' className=' pl-5 font-bold w-full border-2 py-1  px-1 md:px-4 lg:px-4 hover:text-teal-200 duration-300 hover:border-x-teal-200 hover:border-y-teal-200 bg-slate-500 sm:w-32 h-10 rounded-lg'>Cek Service</Link>
           </div>
         </div>
@@ -99,13 +99,13 @@ const Home = () => {
 
 
       {/** ============= Contact  ================= */}
-      <div className='header w-screen mx-auto  mb-20'>
+      <div className='header w-screen  mb-20'>
         <div className=' py-10 text-center grid grid-cols-1 w-full text-6xl font-semibold'>
           Contact
         </div>
 
         <div className='mb-32 grid grid-cols-1 text-center justify-center'>
-          <div className='lg:w-[800px] w-auto rounded-lg shadow-md xl:mx-auto md:mx-3 mx-3 lg:mx-auto h-[420px] bg-slate-400 ' >
+          <div className='lg:w-[800px] w-auto rounded-lg shadow-md mx-auto md:w-auto md:mx-10 h-[420px] bg-slate-400 ' >
             <img src={Contact} alt='' className='my-10 bg-transparent w-[150px] mx-auto ' />
             <div className=' mx-4 bg-slate-400'>
               <h1 class="mt-4 my-4 text-xl bg-slate-400 font-bold">CEO</h1>
