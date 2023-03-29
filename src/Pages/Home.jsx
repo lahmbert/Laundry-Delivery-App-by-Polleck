@@ -21,8 +21,8 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquam perferendis voluptatibus ducimus modi voluptatum delectus commodi.
           </p>
           <div className=' mt-4 flex bg-slate-500 justify-left lg:gap-10 gap-5 md:gap-10 mx-auto  lg:pr-44'>
-            <Link to='/login' className='py-1 px-5 rounded-md hover:bg-[#212245] duration-300 bg-teal-500' >Masuk</Link>
-            <Link to='/service' className='py-1 px-5 rounded-md bg-transparent border-slate-200 hover:border-teal-200 hover:text-teal-200 duration-300 border-2' >Service</Link>
+            <Link to='/login' className='py-1 pt-1.5 px-5 font-bold text-md rounded-md hover:bg-[#212245] duration-300 bg-teal-500' >Masuk</Link>
+            <Link to='/service' className='py-1 px-5 font-bold text-md rounded-md bg-transparent border-slate-200 hover:border-teal-200 hover:text-teal-200 duration-300 border-2' >Service</Link>
           </div>
         </div>
         <div className=' px-0 bg-transparent items-center'>
