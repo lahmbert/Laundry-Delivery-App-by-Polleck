@@ -8,7 +8,7 @@ const ServiceCard = (props) => {
         <div class="p-4 m-3 gap-2 w-auto bg-slate-400 shadow-md  rounded-xl">
             <picture class=" bg-slate-400 rounded-lg block">
                 <img
-                    src={image} alt='' className=' bg-slate-400 hover:scale-125 bg-transparent duration-300 rounded-lg py-3 mx-12 h-28'
+                    src={image} alt='' className=' bg-slate-400 mx-auto hover:scale-125 bg-transparent duration-300 rounded-lg py-3 h-28'
                 />
             </picture>
 

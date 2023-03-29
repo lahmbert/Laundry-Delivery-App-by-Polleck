@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='bg-slate-600'>
           <ul className='mb-3 bg-slate-600'>
             <h1 className='bg-slate-600 text-center mb-5 font-extrabold text-xl'>
-              <img src={logo} alt="" className=' bg-slate-600 mx-20 hover:scale-125 duration-300 w-16 text-center' />
+              <img src={logo} alt="" className=' bg-slate-600 mx-auto hover:scale-125 duration-300 w-16 text-center' />
             </h1>
             <li className=' bg-slate-600 mb-8 text-gray-400 text-xs' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia culpa nam, ex veniam sed ullam necessitatibus laborum fugiat perferendis fuga, modi perspiciatis in totam repudiandae. Laudantium fuga ratione vero illo!</li>
           </ul>
