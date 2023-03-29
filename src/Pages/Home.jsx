@@ -29,6 +29,7 @@ const category = [
 
 
 const Home = () => {
+
   
   return (
     <Helmet title='Home' >

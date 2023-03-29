@@ -38,7 +38,7 @@ const Header = () => {
 
 
   return (
-    <div className='header flex items-center justify-between p-10' >
+    <div className='header sticky top-0 flex items-center justify-between p-5 px-10 w-screen' >
       <img src={logo} alt="logo" className='logo cursor-pointer hover:scale-150 duration-300' />
       <div className=' hidden md:flex items-center gap-11'>
         {
@@ -50,7 +50,7 @@ const Header = () => {
       <div className=" flex items-center gap-4">
         <div className=' font-bold text-lg flex items-center gap-4'>
           <AiOutlineShopping />
-          <Link to='/login' ><AiOutlineUser /></Link>
+          <Link to='/login' onClick={handleNav}  ><AiOutlineUser /></Link>
         </div>
         <div onClick={handleNav} className=' text-lg font-bold block md:hidden' >
           {!nav ? <AiOutlineClose /> : <AiOutlineMenu />}
