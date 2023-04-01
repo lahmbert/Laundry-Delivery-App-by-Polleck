@@ -38,7 +38,7 @@ const Header = () => {
 
 
   return (
-    <div className='header top-0 flex items-center justify-between p-5 px-10 w-screen' >
+    <div className='header sticky top-0 flex items-center justify-between p-5 px-10 w-screen' >
       <img src={logo} alt="logo" className='logo cursor-pointer hover:scale-150 duration-300' />
       <div className=' hidden md:flex items-center gap-11'>
         {
