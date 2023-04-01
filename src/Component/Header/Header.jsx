@@ -25,6 +25,10 @@ const navLink = [
     display: 'Cart',
     path: '/cart'
   },
+  {
+    display: 'Checkout',
+    path: '/checkout'
+  },
   
 ]
 
