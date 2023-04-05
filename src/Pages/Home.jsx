@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import product from '../assets/fake-data/Service'
 import logo from '../assets/images/hero-img.png'
 import Contact from '../assets/images/logo-black.png'
 
 
 import Helmet from '../Component/Helmet/Helmet'
 import './styles/home.css'
+import ServiceCard from '../Component/UI/ServiceCard'
 
-const category = [
+const categoryItem = [
   {
     nama: 'Pakaian',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, illum?'
@@ -30,12 +32,42 @@ const category = [
 
 const Home = () => {
 
-  
+  const [category, setCategory] = useState('ALL')
+  const [allService, setAllService] = useState(product)
+
+  useEffect(() => {
+
+    if (category === 'ALL') {
+      setAllService(product)
+    }
+
+    if (category === 'Pakaian') {
+      const Pakaian = product.filter(item => item.category === 'Pakaian')
+
+      setAllService(Pakaian)
+    }
+
+    if (category === 'Sepatu') {
+      const Sepatu = product.filter(item => item.category === 'Sepatu')
+
+      setAllService(Sepatu)
+    }
+
+    if (category === 'Karpet') {
+      const Karpet = product.filter(item => item.category === 'Karpet')
+
+      setAllService(Karpet)
+    }
+
+  }, [category])
+
+
+
   return (
     <Helmet title='Home' >
 
       {/**============= Hero ============== */}
-      <div className='grid grid-cols-1 px-5 sm:pr-10 lg:mb-5 sm:grid-cols-2 py-5 bg-slate-500' >
+      <div className='grid grid-cols-1 px-5 sm:pr-10 sm:grid-cols-2 py-5 bg-slate-500' >
         <div className=' items-center justify-center px-5 py-28 bg-slate-500'>
           <h1 className=' font-bold text-xl mb-5 bg-slate-500' >Mencuci tanpa menyentuh</h1>
           <h2 className=' text-teal-200 font-bold text-3xl mb-5 bg-slate-500'>PAKAIAN KOTOR? <span className=' bg-slate-500'> <br />Tunggu kami <span className=' bg-slate-500 flex'>di depan<h2 className=' text-[#df2020] pl-2 bg-slate-500'> Pintu</h2></span></span></h2>
@@ -48,20 +80,20 @@ const Home = () => {
           </div>
         </div>
         <div className=' px-0 bg-transparent items-center'>
-          <img src={logo} alt="" className='logosum bg-transparent transition hover:ease-in duration-300 cursor-pointer lg:w-[300] lg:h-[500px] mb-10 text-center lg:mx-32 bg-slate-500' />
+          <img src={logo} alt="" className='logosum bg-transparent transition hover:ease-in duration-300 cursor-pointer lg:w-[300] lg:h-[500px] text-center lg:mx-32 bg-slate-500' />
         </div>
       </div>
 
 
-      {/** =============== Service ================= */}
-      <div className='py-10 w-screen bg-slate-400'>
+      {/** =============== Category ================= */}
+      <div className='py-10 w-screen '>
 
-        <h1 className=' text-center mb-2 bg-slate-400 font-semibold text-6xl'>Service</h1>
-        <p className=' text-slate-600 mb-10 bg-slate-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus.</p>
-        <div className='px-4 container mx-auto bg-slate-400 mb-20 items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+        <h1 className=' text-center my-8  font-semibold text-6xl'>Category</h1>
+        <p className=' text-slate-300 mb-10  text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus.</p>
+        <div className='px-4 container mx-auto lg:mx-5 gap-2 mb-20 items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
           {
-            category.map((item) => (
-              <div class="p-4 m-3 gap-2 w-auto bg-slate-500 shadow-md  rounded-xl">
+            categoryItem.map((item,index) => (
+              <div class="p-4 m-3 gap-2 w-auto bg-slate-400 shadow-md  rounded-xl">
                 <picture class=" bg-transparent rounded-lg block">
                   <img
                     src={logo} alt='' className='mx-auto hover:scale-125 bg-transparent duration-300 rounded-lg py-3 h-28'
@@ -79,6 +111,26 @@ const Home = () => {
             ))
           }
         </div>
+      </div>
+
+      {/** ============= Popular Service  ================= */}
+      <h1 className=' text-center  font-semibold text-6xl'>Our Service</h1>
+        <div className='px-4 container mx-auto items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'></div>
+      <div className='grid grid-cols-1 gap-10 mx-4'>
+        <div className='mx-auto flex lg:gap-16 md:gap-10 gap-5 sm:px-24 my-7 rounded-lg py-4 bg-teal-500 px-10 lg:px-[23.5rem] md:px-[14rem] '>
+          <button className={category === 'ALL' ? ' bg-slate-500  font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('ALL')}>All</button>
+          <button className={category === 'Pakaian' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Pakaian')} >Pakaian</button>
+          <button className={category === 'Karpet' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Karpet')} >Karpet</button>
+          <button className={category === 'Sepatu' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Sepatu')} >Sepatu</button>
+        </div>
+      </div>
+      <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>
+        {
+          allService.map(item => (
+            <ServiceCard item={item} />
+          ))
+        }
+
       </div>
 
 

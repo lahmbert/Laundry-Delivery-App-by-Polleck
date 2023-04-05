@@ -1,44 +1,43 @@
 import React from 'react'
 
 import Helmet from '../Component/Helmet/Helmet'
-
-
-
 import product from '../assets/fake-data/Service'
 import ServiceCard from '../Component/UI/ServiceCard'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import ReactPaginate from 'react-paginate'
+import './styles/service.css'
 
 
 const Service = () => {
 
-  const [category, setCategory] = useState('ALL')
-  const [allService, setAllService] = useState(product)
 
-  useEffect(() => {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [pageNumber, setPageNumber] = useState(0)
 
-    if (category === 'ALL') {
-      setAllService(product)
+  const searchedService = product.filter((item) => {
+    if (searchTerm.value === '') {
+      return item;
     }
-
-    if (category === 'Pakaian') {
-      const Pakaian = product.filter(item => item.category === 'Pakaian')
-
-      setAllService(Pakaian)
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return item;
+    } else {
+      return console.log('Not Found')
     }
+  })
 
-    if (category === 'Sepatu') {
-      const Sepatu = product.filter(item => item.category === 'Sepatu')
 
-      setAllService(Sepatu)
-    }
+  const productPerPage = 4;
+  const visitedPage = pageNumber * productPerPage;
+  const displayPage = searchedService.slice(
+    visitedPage,
+    visitedPage + productPerPage
+  );
 
-    if (category === 'Karpet') {
-      const Karpet = product.filter(item => item.category === 'Karpet')
+  const pageCount = Math.ceil(searchedService.length / productPerPage);
 
-      setAllService(Karpet)
-    }
-
-  }, [category])
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
 
 
@@ -47,21 +46,47 @@ const Service = () => {
 
       <h1 className='px-7 py-12 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
 
-      <div className='grid grid-cols-1 gap-10 mx-4'>
+      {/* <div className='grid grid-cols-1 gap-10 mx-4'>
         <div className='mx-auto flex lg:gap-20 gap-5 mx md:px-24 sm:px-24 my-7 rounded-lg py-4 bg-teal-500 px-10 lg:px-30'>
           <button className={category === 'ALL' ? ' bg-slate-500  font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('ALL')}>All</button>
           <button className={category === 'Pakaian' ? ' bg-slate-500 font-semibold py-1 px-1 lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Pakaian')} >Pakaian</button>
           <button className={category === 'Karpet' ? ' bg-slate-500 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Karpet')} >Karpet</button>
           <button className={category === 'Sepatu' ? ' bg-slate-500 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Sepatu')} >Sepatu</button>
         </div>
+      </div> */}
+
+      <div className='my-10 mx-5 lg:mx-10 md:mx-3 lg:flex lg:justify-between grid grid-cols-1 md:flex md:justify-between'>
+        <div className='lg:mx-3 flex gap-5'>
+          <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Search...' className='p-1.5 w-full text-gray-600 px-3 placeholder:text-gray-400 lg:w-[20rem] md:w-[20rem] rounded-sm bg-white focus:outline-none' />
+          <button className=' bg-teal-500 lg:px-10 px-6 rounded-md hover:bg-[#212245] duration-300 '>Search</button>
+        </div>
+        <div className=' lg:mx-5'>
+          <select name="" id="category" className='lg:w-[15rem] w-full justify-end md:w-[10rem] mt-5 lg:mt-0 md:mt-0 focus:outline-none p-1.5 rounded-sm bg-white text-gray-600'>
+            <option>All</option>
+            <option value="ascending">Alphabetically, A-Z</option>
+            <option value="descending">Alphabetically, Z-A</option>
+            <option value="high-price">High Price</option>
+            <option value="low-price">Low Price</option>
+          </select>
+        </div>
       </div>
-      <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5'>
+      <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>
         {
-          allService.map(item => (
+          displayPage.map(item => (
             <ServiceCard item={item} />
           ))
         }
 
+      </div>
+
+      <div className=''>
+      <ReactPaginate className='flex paginationBttns justify-center gap-4 p-4'
+                pageCount={pageCount}
+                onPageChange={changePage}
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                containerClassName=" paginationBttns "
+              />
       </div>
     </Helmet>
   )
