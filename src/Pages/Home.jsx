@@ -90,7 +90,7 @@ const Home = () => {
 
         <h1 className=' text-center my-8  font-semibold text-6xl'>Category</h1>
         <p className=' text-slate-300 mb-10  text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, minus.</p>
-        <div className='px-4 container mx-auto lg:mx-5 gap-2 mb-20 items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+        <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>
           {
             categoryItem.map((item,index) => (
               <div class="p-4 m-3 gap-2 w-auto bg-slate-400 shadow-md  rounded-xl">
