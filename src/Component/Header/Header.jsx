@@ -48,7 +48,7 @@ const Header = () => {
         }
       </div>
       <div className=" flex items-center gap-4">
-        <div className=' font-bold text-lg flex items-center gap-2'>
+        <div className=' font-bold text-lg flex items-center gap-5'>
           <div className=' bg-transparent flex items-center' >
             <AiOutlineShopping />
             <div className=' bg-teal-500 absolute text-xs text-gray-100 right-[6.6rem] rounded-full px-[5px] top-[1.8rem] md:right-[3.5rem] lg:right-[3.5rem]' >5</div>

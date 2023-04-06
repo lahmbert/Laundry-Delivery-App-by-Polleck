@@ -1,5 +1,6 @@
 import React from 'react'
 
+import CommonSection from '../Component/UI/CommonSection'
 import Helmet from '../Component/Helmet/Helmet'
 import product from '../assets/fake-data/Service'
 import ServiceCard from '../Component/UI/ServiceCard'
@@ -9,7 +10,6 @@ import './styles/service.css'
 
 
 const Service = () => {
-
 
   const [searchTerm, setSearchTerm] = useState('')
   const [pageNumber, setPageNumber] = useState(0)
@@ -44,7 +44,7 @@ const Service = () => {
   return (
     <Helmet title='Service' >
 
-      <h1 className='px-7 py-12 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
+      <CommonSection title='Service' />
 
       <div className='my-10 mx-5 lg:mx-10 md:mx-3 lg:flex lg:justify-between grid grid-cols-1 md:flex md:justify-between'>
         <div className='lg:mx-3 flex gap-5'>
