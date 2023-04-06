@@ -5,7 +5,6 @@ import product from '../assets/fake-data/Service'
 import logo from '../assets/images/hero-img.png'
 import Contact from '../assets/images/logo-black.png'
 
-
 import Helmet from '../Component/Helmet/Helmet'
 import './styles/home.css'
 import ServiceCard from '../Component/UI/ServiceCard'

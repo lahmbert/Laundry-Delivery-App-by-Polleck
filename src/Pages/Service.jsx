@@ -70,7 +70,7 @@ const Service = () => {
           </select>
         </div>
       </div>
-      <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>
+      <div className=' lg:mx-10 mb-10 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>
         {
           displayPage.map(item => (
             <ServiceCard item={item} />
