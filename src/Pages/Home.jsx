@@ -117,10 +117,10 @@ const Home = () => {
         <div className='px-4 container mx-auto items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'></div>
       <div className='grid grid-cols-1 gap-10 mx-4'>
         <div className='mx-auto flex lg:gap-16 md:gap-10 gap-5 sm:px-24 my-7 rounded-lg py-4 bg-teal-500 px-10 lg:px-[23.5rem] md:px-[14rem] '>
-          <button className={category === 'ALL' ? ' bg-slate-500  font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('ALL')}>All</button>
-          <button className={category === 'Pakaian' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Pakaian')} >Pakaian</button>
-          <button className={category === 'Karpet' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Karpet')} >Karpet</button>
-          <button className={category === 'Sepatu' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Sepatu')} >Sepatu</button>
+          <button className={category === 'ALL' ? ' bg-slate-500  font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base md:text-md rounded-lg' : 'font-bold text-xs lg:text-base md:text-md'} onClick={() => setCategory('ALL')}>All</button>
+          <button className={category === 'Pakaian' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 lg:text-base md:text-md text-xs rounded-lg' : 'font-bold text-xs lg:text-base md:text-md'} onClick={() => setCategory('Pakaian')} >Pakaian</button>
+          <button className={category === 'Karpet' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base md:text-md rounded-lg' : 'font-bold text-xs lg:text-base md:text-md'} onClick={() => setCategory('Karpet')} >Karpet</button>
+          <button className={category === 'Sepatu' ? ' bg-slate-500 font-semibold py-1 lg:px-4 px-1 md:px-4 text-xs lg:text-base md:text-md rounded-lg' : 'font-bold text-xs lg:text-base md:text-md'} onClick={() => setCategory('Sepatu')} >Sepatu</button>
         </div>
       </div>
       <div className=' lg:mx-10 mb-20 items-center justify-center gap-0  grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4'>

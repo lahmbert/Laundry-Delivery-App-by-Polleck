@@ -46,15 +46,6 @@ const Service = () => {
 
       <h1 className='px-7 py-12 pl-10 w-screen text-3xl lg:mb-10 mb-8 font-extrabold bg-slate-400'>Service</h1>
 
-      {/* <div className='grid grid-cols-1 gap-10 mx-4'>
-        <div className='mx-auto flex lg:gap-20 gap-5 mx md:px-24 sm:px-24 my-7 rounded-lg py-4 bg-teal-500 px-10 lg:px-30'>
-          <button className={category === 'ALL' ? ' bg-slate-500  font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('ALL')}>All</button>
-          <button className={category === 'Pakaian' ? ' bg-slate-500 font-semibold py-1 px-1 lg:text-base text-xs lg:text-md rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Pakaian')} >Pakaian</button>
-          <button className={category === 'Karpet' ? ' bg-slate-500 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Karpet')} >Karpet</button>
-          <button className={category === 'Sepatu' ? ' bg-slate-500 font-semibold py-1 px-1 text-xs lg:text-base rounded-lg' : 'font-bold text-xs lg:text-base'} onClick={() => setCategory('Sepatu')} >Sepatu</button>
-        </div>
-      </div> */}
-
       <div className='my-10 mx-5 lg:mx-10 md:mx-3 lg:flex lg:justify-between grid grid-cols-1 md:flex md:justify-between'>
         <div className='lg:mx-3 flex gap-5'>
           <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Search...' className='p-1.5 w-full text-gray-600 px-3 placeholder:text-gray-400 lg:w-[20rem] md:w-[20rem] rounded-sm bg-white focus:outline-none' />

@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import logo from '../../assets/images/logo-black.png'
 import './header.css'
 
-
 import { AiOutlineUser, AiOutlineShopping, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { NavLink, Link } from 'react-router-dom'
 
@@ -25,17 +24,18 @@ const navLink = [
     display: 'Cart',
     path: '/cart'
   },
-  
+
 ]
 
 
 const Header = () => {
 
+  
   const [nav, setNav] = useState(true)
   const handleNav = () => {
     setNav(!nav)
   }
-
+  
 
   return (
     <div className='header sticky top-0 flex items-center justify-between p-5 px-10 w-screen' >
@@ -43,13 +43,16 @@ const Header = () => {
       <div className=' hidden md:flex items-center gap-11'>
         {
           navLink.map((item, index) => (
-            <NavLink className={navClass => navClass.isActive ? ' font-bold text-teal-400' : ' font-bold text-white' } to={item.path} key={index}>{item.display}</NavLink>
+            <NavLink className={navClass => navClass.isActive ? ' font-bold text-teal-400' : ' font-bold text-white'} to={item.path} key={index}>{item.display}</NavLink>
           ))
         }
       </div>
       <div className=" flex items-center gap-4">
-        <div className=' font-bold text-lg flex items-center gap-4'>
-          <AiOutlineShopping />
+        <div className=' font-bold text-lg flex items-center gap-2'>
+          <div className=' bg-transparent flex items-center' >
+            <AiOutlineShopping />
+            <div className=' bg-teal-500 absolute text-xs text-gray-100 right-[6.6rem] rounded-full px-[5px] top-[1.8rem] md:right-[3.5rem] lg:right-[3.5rem]' >5</div>
+          </div>
           <Link to='/login' onClick={handleNav}  ><AiOutlineUser /></Link>
         </div>
         <div onClick={handleNav} className=' text-lg font-bold block md:hidden' >

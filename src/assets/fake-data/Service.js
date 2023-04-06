@@ -7,7 +7,7 @@ const Service = [
         id:'01',
         title: 'Cuci Saja',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Pakaian',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -16,7 +16,7 @@ const Service = [
         id:'02',
         title: 'Cuci + Lipat',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Pakaian',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -25,7 +25,7 @@ const Service = [
         id:'03',
         title: 'Cuci + Setrika',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Pakaian',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -34,7 +34,7 @@ const Service = [
         id:'04',
         title: 'Wol',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -43,7 +43,7 @@ const Service = [
         id:'05',
         title: 'Bulu Rafsur',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -52,7 +52,7 @@ const Service = [
         id:'06',
         title: 'Nilon',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -61,7 +61,7 @@ const Service = [
         id:'07',
         title: 'Viscose',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -70,7 +70,7 @@ const Service = [
         id:'08',
         title: 'Bulu Sutra',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -79,7 +79,7 @@ const Service = [
         id:'09',
         title: 'Bulu Sutra',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Karpet',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -88,7 +88,7 @@ const Service = [
         id:'10',
         title: 'Cuci Saja',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Sepatu',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -97,7 +97,7 @@ const Service = [
         id:'11',
         title: 'Cuci + Poles',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Sepatu',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'
@@ -106,7 +106,7 @@ const Service = [
         id:'10',
         title: 'Cuci + Semir',
         image: serviceImg,
-        harga: '',
+        price: '10000',
         category: 'Sepatu',
 
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, et!'

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const ServiceCard = (props) => {
 
-    const { id, image, title, desc } = props.item
+    const { id, image, title, desc, price } = props.item
     return (
         <div class="p-4 m-3 gap-2 w-auto bg-slate-400 shadow-md  rounded-xl">
             <picture class=" bg-slate-400 rounded-lg block">
@@ -12,13 +12,16 @@ const ServiceCard = (props) => {
                 />
             </picture>
 
-            <h1 class="mt-4 mb-2 text-xl bg-slate-400 font-bold">{title}</h1>
+            <NavLink to={`/service/${id}`}>
+                <h1 class="mt-4 mb-2 text-xl bg-slate-400 font-bold">{title}</h1>
+            </NavLink>
             <p class="text-xs bg-slate-400 text-gray-600">
                 {desc}
             </p>
-            <NavLink to={`/service/${id}`}>
-                <button className=' mt-3 px-8 bg-teal-500 hover:bg-[#212245] duration-300  rounded-md py-1'>Get Start</button>
-            </NavLink>
+            <div className=' bg-slate-400 flex gap-5 items-center justify-between'>
+                <h1 className='bg-transparent mt-3 py-1' >Rp {price} ,-</h1>
+                <button className=' mt-3 px-5 bg-teal-500 hover:bg-[#212245] duration-300  rounded-md py-1'>Add to cart</button>
+            </div>
         </div>
     )
 }
