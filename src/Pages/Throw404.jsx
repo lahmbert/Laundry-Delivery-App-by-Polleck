@@ -7,8 +7,18 @@ import './styles/home.css'
 const Throw404 = () => {
   return (
     <Helmet title='Not Found' className='w-screen' >
-      <div className=" pt-12 number text-center bg-slate-500 w-screen ">404</div>
-      <div className="w-screen pt-10 text bg-white text-slate-500 pb-40 text-center"><span className=' bg-white text-slate-500 '>Ooops...</span><br/>page not found</div>
+      <section className="flex items-center h-full p-16 bg-gray-400 text-gray-100">
+        <div className="container flex bg-transparent flex-col items-center justify-center px-5 mx-auto my-8">
+          <div className="max-w-md bg-transparent text-center">
+            <h2 className="mb-8 bg-transparent font-extrabold text-9xl text-gray-600">
+              <span className="sr-only">Error</span>404
+            </h2>
+            <p className="text-2xl bg-transparent text-gray-700 font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+            <p className="mt-4 mb-8 bg-transparent text-white">But dont worry, you can find plenty of other things on our homepage.</p>
+            <a rel="noopener noreferrer" href="/" className="px-8 py-3 font-semibold rounded bg-teal-500 hover:bg-[#212245]">Back to homepage</a>
+          </div>
+        </div>
+      </section>
     </Helmet>
   )
 }
