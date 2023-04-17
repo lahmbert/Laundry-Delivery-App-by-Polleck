@@ -53,7 +53,7 @@ const Header = () => {
             <AiOutlineShopping />
             <div className=' bg-teal-500 absolute text-xs text-gray-100 right-[5.6rem] rounded-full px-[5px] top-[1.8rem] md:right-[3.5rem] lg:right-[3.5rem]' >5</div>
           </div>
-          <Link to='/login' onClick={handleNav}  ><AiOutlineUser /></Link>
+          <Link to='/login'  ><AiOutlineUser /></Link>
         </div>
         <div onClick={handleNav} className=' text-lg font-bold block md:hidden' >
           {!nav ? <AiOutlineClose /> : <AiOutlineMenu />}
